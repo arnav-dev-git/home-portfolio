@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #292f35;
+  height: 200vh;
+  letter-spacing: 2px;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+}
+
+//* Top cover
+
+.top-cover {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: transparent;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 110px) auto 220px 110px;
+  column-gap: 1px;
+  z-index: 30;
+
+  //^ top cover spans
+  span {
+    height: 100%;
+    border-right: 1px solid #fffef567;
+  }
+}
+
+//* side nav that contains the logo and hamburger menu
+
+.side-nav {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  border-right: 1px solid #fffef567;
+
+  //^ logo
+
+  .logo {
+    height: 45%;
+    padding: 10px;
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .nav-tab {
+    cursor: pointer;
+    display: flex;
+
+    //^ hamburger menu lines
+
+    div {
+      height: 30px;
+      width: 2px;
+      background-color: #c9c9c9;
+      margin: 4px;
+    }
+  }
+}
+
+//* short nav and the links ----->
+
+.short-nav {
+  grid-column: 5;
+  height: 100%;
+  padding-top: 15%;
+  display: flex;
+  flex-direction: column;
+  color: #c9c9c9;
+  border-right: 1px solid #fffef567;
+  border-left: 1px solid #fffef567;
+}
+
+//* slider and the icons
+.slider-icons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .slider {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c9c9c9;
+    margin-top: 3em;
+
+    div {
+      margin-top: 1em;
+    }
+
+    .slide {
+      width: 0.8px;
+      height: 60%;
+      background-color: #c9c9c9;
+      position: relative;
+    }
+  }
+}
